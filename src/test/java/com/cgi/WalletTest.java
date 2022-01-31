@@ -131,7 +131,7 @@ public class WalletTest {
     }
 
     @Test
-    @Disabled(value = "This test is critical it did not run, please check") // Will skip test execution
+    // @Disabled(value = "This test is critical it did not run, please check") // Will skip test execution
     public void testThatAfterDepositingOneTimeThatTheSecondTimeRuns() {
         emptyWallet.deposit(10);
         emptyWallet.deposit(30);
