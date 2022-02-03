@@ -17,8 +17,9 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn clean verify'
-                // Next lines are for java testing reports
+                // This line is for java reporting
                 junit 'target/surefire-reports/*.xml'
+                // This line is for (java) code coverage
                 publishCoverage adapters: [jacocoAdapter('target/site/jacoco/jacoco.xml')]
             }
         }
